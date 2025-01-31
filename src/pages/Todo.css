@@ -1,0 +1,75 @@
+.todo-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 29px;
+  padding-right: 200px;
+  padding-left: 100px;
+  font-family: 'RobotoMono-Bold', sans-serif;
+  z-index: 1000;
+  background-color: rgba(15, 103, 177, 0.5);
+  border-radius: 25px;
+  transition: 0.5s ease;
+}
+.todo-container:hover {
+  transform: translate(-50%, -50%) scale(1.05); /* Scale up on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add box shadow on hover */
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-family: 'RobotoMono-Bold', sans-serif;
+  font-size: 15px;
+  color: black;
+}
+
+.input-container button, li button {
+  font-family: 'RobotoMono-Bold', Tahoma, sans-serif;
+  font-size: 15px;
+  padding: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: rgb(250, 255, 175);
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+  color: rgb(15, 103, 177);
+  border-radius: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  white-space: wrap;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  background-color: rgba(15, 103, 177, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: 'RobotoMono-Bold', sans-serif;
+  transition: 0.3s ease;
+}
+
+li:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.3s ease;
+}
