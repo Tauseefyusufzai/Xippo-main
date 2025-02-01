@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+// App.jsx
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import "./App.css";
 import SideBar from "./pages/SideBar";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import PomodoroTimer from "./pages/PomodoroTimer";
 import AnalogClock from "./pages/AnalogClock";
@@ -14,7 +15,7 @@ function VideoMessage() {
       <h5>
         <span className="typed-text typing-cursor">Hi! I am Xippo</span>
       </h5>
-      <p>Let's Boost your Productivity together </p>
+      <p>Let's Boost your Productivity together</p>
     </div>
   );
 }
@@ -22,20 +23,18 @@ function VideoMessage() {
 function App() {
   return (
     <>
-      <Router>
-        <div className="App">
-          <SideBar />
-          <div className="content">
-            <Routes>
-              <Route path="/" element={<><Home /><AnalogClock /></>} />
-              <Route path="/todo" element={<><Todo /><AnalogClock /></>} />
-              <Route path="/pomodoro" element={<><PomodoroTimer /><AnalogClock /></>} />
-              <Route path="*" element={<div>not found</div>} />
-            </Routes>
-          </div>
-          <Footer />
+      <div className="App">
+        <SideBar />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<><Home /><AnalogClock /></>} />
+            <Route path="/todo" element={<><Todo /><AnalogClock /></>} />
+            <Route path="/pomodoro" element={<><PomodoroTimer /><AnalogClock /></>} />
+            <Route path="*" element={<div>not found</div>} />
+          </Routes>
         </div>
-      </Router>
+        <Footer />
+      </div>
     </>
   );
 }
